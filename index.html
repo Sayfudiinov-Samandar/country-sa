@@ -18,7 +18,32 @@
     <main class="site-main">
         <section class="hero">
             <div class="container">
+                <div class="hero-box">
+                    
+                <div class="hero-box__country-info">
+                    
+                    <form class="hero-box__form">
+                        <h2  class="hero-box__title" id="current">
+                            Uzbekistan
+                        </h2>
+                    </form>
 
+                    <p class="hero-box__info-text">
+                        Ea est debitis odit quas fuga ducimus error magnam molestiae omnis dolorem sed laborum, vitae corrupti? Illum culpa temporibus sapiente iste nihil!
+                    </p>
+                </div>
+                <div class="hero-box__earth">
+                    <canvas id="globe"></canvas>
+                </div>
+
+                </div>
+
+
+                <div class="hero-info">
+                    <div class="hero-info__box">
+
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -28,5 +53,50 @@
 
         </div>
     </footer>
+
+
+    <template class="template">
+        <div class="item-box">
+            <div>
+                <img class="item-box__flag" width="300" height="200" src="" alt="">
+            </div>
+            <div class="item-box__info">
+
+                <div>
+                    <strong class="item-box__reg-title">
+                        Region:
+                        <p class="item-box__region"></p>
+                    </strong>
+    
+                    <p class="item-box__bor-title">
+                        Border:
+                        <p class="item-box__border"></p>
+                    </p>
+                </div>
+
+                <div>
+                    <p class="item-box__lag-title">
+                        Language:
+                        <p class="item-box__lagugae"></p>
+                    </p>
+    
+                    <p class="item-box__sub-title">
+                        Subregion:
+                        <p class="item-box__subregion">
+    
+                        </p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </template>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+    <script src="https://d3js.org/d3-geo.v1.min.js"></script>
+    <script src="https://d3js.org/topojson.v2.min.js"></script>
+    <script src="https://bl.ocks.org/mbostock/raw/7ea1dde508cec6d2d95306f92642bc42/6aac691494f752142a67cc43c51a0fd09896dbd4/versor.js"></script>
+    <script src="./js/globe.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

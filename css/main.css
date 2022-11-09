@@ -352,6 +352,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: #130a3c;
   /* font-family: "Roboto", "Arial", sans-serif; */
   /* font-size: 16px; */
   /* font-weight: 400; */
@@ -386,4 +387,119 @@ body {
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.hero {
+  padding-top: 160px;
+  padding-bottom: 100px;
+}
+
+.hero-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 80px;
+}
+
+#globe {
+  cursor: move;
+  position: relative;
+  left: calc(50% - 250px);
+}
+#globe:active {
+  cursor: pointer;
+}
+
+.bg {
+  width: 30px;
+  height: 30px;
+  background-color: #736b96;
+}
+
+.hero-box__country-info {
+  width: 100%;
+  max-width: 450px;
+}
+
+.hero-box__title {
+  margin: 0;
+  min-height: 15px;
+  font-family: monospace;
+  font-size: 45px;
+  line-height: 60px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.hero-box__info-text {
+  margin-top: 0;
+  font-family: monospace;
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.hero-info__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.item-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(104, 57, 186, 0.1176470588);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+}
+
+.item-box__reg-title {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: normal;
+}
+
+.item-box__region {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: normal;
+}
+
+.item-box__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.item-box__info * p {
+  margin: 0;
+  color: #fff;
+}
+
+.item-box__info * strong {
+  color: #fff;
 }/*# sourceMappingURL=main.css.map */

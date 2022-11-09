@@ -1,0 +1,55 @@
+.hero{
+    padding-top: 160px;
+    padding-bottom: 100px;
+}
+
+.hero-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+#globe {
+    cursor: move;
+    position: relative;
+    left: calc(50% + -250px);
+    &:active{
+        cursor: pointer;
+    }
+}
+
+.bg{
+    width: 30px;
+    height: 30px;
+    background-color: #736b96;
+}
+
+.hero-box__country-info{
+    width: 100%;
+    max-width: 450px;
+}
+.hero-box__title{
+    margin: 0;
+    min-height: 15px;
+    font-family: monospace;
+    font-size: 45px;
+    line-height: 60px;
+    font-weight: 600;
+    color: #fff;
+
+}
+.hero-box__info-text{
+    margin-top: 0;
+    font-family: monospace;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.hero-info__box{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
