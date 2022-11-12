@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;800&display=swap" rel="stylesheet">
+    <title>uy ishi 20</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="./css/mini-normilze.css"> -->
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body class="body-all">
+    <header>
+        <div class="container">
+            <div class="header">
+                <a class="header-link" href="index.html">
+                    Where in the world?
+                </a>
+                <button class="heder-text" type="submit">
+                    Dark Mode
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-father-box">
+                    <form class="form">
+                        <input class="hero-input" placeholder="Search for a country…" name="search">
+
+                        <select class="select" name="country" id="country">
+                            <option>Filter by Region</option>
+                            <option value="Africa">Africa</option>
+                            <option value="America">America</option>
+                            <option value="Asia">Asia</option>
+                            <option value="Europe">Europe</option>
+                            <option value="Oceania">Oceania</option>
+                        </select>
+                    </form>
+                    <ul class="row hero-list">
+
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <template class="all-template">
+        <li class="col-3 p-0 hero-list-box">
+            <img class="flag-img" src="./img/germany.svg.png" width="267" height="160" alt="Flag">
+            <div class="box-place">
+                <h3 class="hero-list-box-title">
+                    Germany
+                </h3>
+                <div class="d-flex flex-column gap-2">
+
+                    <div class="d-flex align-items-center gap-1">
+                        <strong>
+                            Population:
+                        </strong>
+                        <p class="hero-list-box-text">
+                            81,770,900
+                        </p>
+
+                    </div>
+
+                    <div class="d-flex align-items-center gap-1">
+                        <strong>
+                            Region:
+                        </strong>
+                        <p class="hero-list-box-text text-region">
+                            Europe
+                        </p>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-1">
+                        <strong>
+                            Capital:
+                        </strong>
+                        <p class="hero-list-box-text text-cap">
+                            Berlin
+                        </p>
+                    </div>
+
+                    <button type="button" class="btn btn-primary btn-more" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        More info
+                    </button>
+                </div>
+            </div>
+
+        </li>
+    </template>
+
+
+    <template class="all-template-modal">
+        <li class="hero-list-box-modal d-flex pe-5">
+            <div>
+                <img class="flag-img" src="./img/germany.svg.png" width="267" height="160" alt="Flag">
+            </div>
+            
+            <div class="box-place-modal d-flex justify-content-between w-100">
+                <div class="ms-5 d-flex flex-column gap-2">
+                    
+                    <h3 class="hero-list-box-title modal-title">
+                        Germany
+                    </h3>
+
+                    <div class="">
+                        <strong>
+                            Region:
+                        </strong>
+                        <p class="hero-list-box-text-md text-region">
+                            Europe
+                        </p>
+                    </div>
+
+
+
+                    <div class="">
+                        <strong>
+                            Currencies:
+                        </strong>
+                        <p class="hero-list-box-text-md modal-curr">
+                            81,770,900
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="">
+                        <strong>
+                            Borders:
+                        </strong>
+                        <p class="hero-list-box-text-md text-cap">
+                            Berlin
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="mt-5 d-flex flex-column gap-3">
+                    <div class="">
+                        <strong>
+                            Language:
+                        </strong>
+                        <p class="hero-list-box-text-md text-leng">
+                            Europe
+                        </p>
+                    </div>
+                    <div class="">
+                        <strong>
+                            Subregion:
+                        </strong>
+                        <p class="hero-list-box-text-md text-subreg">
+                            Europe
+                        </p>
+                    </div>
+
+                    <div>
+                        <a class="modal-map text-decoration-none" href="" target="blank"> Google map</a>
+                    </div>
+                </div>
+            </div>
+
+        </li>
+    </template>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                </div>
+                <div class="modal-body">
+                    <ul class="modal-result">
+
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/allcountry.js"></script>
+</body>
+
+</html>

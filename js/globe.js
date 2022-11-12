@@ -11,21 +11,52 @@ var degPerSec = 6
 // start angles
 var angles = { x: -20, y: -20, z: 0}
 // colors
-var colorWater = '#736b9635'
-var colorLand = '#6839ba'
-var colorGraticule = '#736b9635'
+var colorWater = '#2b3c56b0'
+var colorLand = '#0b773b'
+var colorGraticule = '#2b3c56b1'
 var colorCountry = '#fff'
-
+const elSiteForm=document.querySelector(".header-box__form");
+const elForminput =document.querySelector(".header-box__input")
 
 //
 // Handler
 //
 
+
+
+
+elSiteForm.addEventListener("submit",(evt)=>{
+    evt.preventDefault()
+    d3.tsv('https://gist.githubusercontent.com/mbostock/4090846/raw/07e73f3c2d21558489604a0bc434b3a5cf41a867/world-country-names.tsv', function (error, countries) {
+        getCountryId(countries,elForminput.value)
+    })
+})
+
+let objCountry
+function getCountryId(array,inpValue) {
+    let findCountry = array.find(item => {
+        return item.name==inpValue
+    });
+    objCountry=findCountry
+    if (objCountry) {
+      enter(objCountry)
+    }
+}
+
+
+
+
+
+//find country
 function enter(country) {
+
   var country = countryList.find(function(c) {
-    return parseInt(c.id, 10) === parseInt(country.id, 10)
+   return (parseInt(c.id, 10) === parseInt(country.id, 10))
+
+
   })
-  current.text(country && country.name || '')
+
+    current.text(country && country.name || '')
 }
 
 function leave(country) {
@@ -66,8 +97,8 @@ function setAngles() {
 }
 
 function scale() {
-  width = document.documentElement=800
-  height = document.documentElement=600
+  width = document.documentElement=900
+  height = document.documentElement=800
   canvas.attr('width', width).attr('height', height)
   projection
     .scale((scaleFactor * Math.min(width, height)) / 2)
@@ -142,13 +173,12 @@ function loadData(cb) {
   d3.json('https://unpkg.com/world-atlas@1/world/110m.json', function(error, world) {
     if (error) throw error
     d3.tsv('https://gist.githubusercontent.com/mbostock/4090846/raw/07e73f3c2d21558489604a0bc434b3a5cf41a867/world-country-names.tsv', function(error, countries) {
-      if (error) throw error
+    if (error) throw error
       cb(world, countries)
     })
   })
 }
 
-// https://github.com/d3/d3-polygon
 function polygonContains(polygon, point) {
     var n = polygon.length
   var p = polygon[n - 1]
@@ -171,9 +201,11 @@ function mousemove() {
       leave(currentCountry)
       currentCountry = undefined
       render()
+
     }
     return
-}
+  }
+
 if (c === currentCountry) {
 
       return
@@ -181,8 +213,12 @@ if (c === currentCountry) {
     currentCountry = c
     render()
     enter(c)
-}
 
+  }
+
+  
+
+  
 function getCountry(event) {
   var pos = projection.invert(d3.mouse(event))
   return countries.features.find(function(f) {

@@ -1,19 +1,19 @@
 .hero{
-    padding-top: 160px;
-    padding-bottom: 100px;
+    padding-top: 100px;
 }
 
 .hero-box{
+    width: 100%;
     display: flex;
-    align-items: center;
+    flex-direction: row-reverse;
     justify-content: space-between;
-    margin-bottom: 80px;
 }
 
 #globe {
     cursor: move;
     position: relative;
-    left: calc(50% + -250px);
+    top: -50px;
+    left: calc(50% + -380px);
     &:active{
         cursor: pointer;
     }
@@ -25,14 +25,22 @@
     background-color: #736b96;
 }
 
+.hero-box__form{
+    width: 100%;
+    max-width: 350px;
+}
 .hero-box__country-info{
     width: 100%;
     max-width: 450px;
 }
 .hero-box__title{
+
     margin: 0;
+    width: 100%;
     min-height: 15px;
+    max-width: 400px;
     font-family: monospace;
+    text-align: center;
     font-size: 45px;
     line-height: 60px;
     font-weight: 600;
@@ -52,4 +60,50 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.hero-box__grb{
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-radius: 15px;
+
+    width: 300px !important;
+    height: 160px !important;
+}
+.hero-box__population{
+    text-align: center;
+    font-family: 'Noto Sans Canadian Aboriginal';
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;    
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #0b773b;
+
+
+}
+
+.hero-box__borders{    
+    width: 300px;
+    display: flex ;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #0b773b;
+}
+
+
+.hero-box__map{
+    margin: 0;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 400;
+    text-decoration: none;
+}
+.map-box{
+margin-top: 0 !important;
 }

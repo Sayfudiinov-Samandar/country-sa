@@ -1,35 +1,44 @@
 .item-box{
+    margin: 0 auto;
+    width: 300px !important;
+    height: 120px !important;
+}
+.item-box__flag{
+    margin: 0 auto;
+    width: 300px !important;
+    height: 180px !important;
+}
+.item-box__bor-title{
     display: flex;
     align-items: center;
-    gap: 40px;
-    padding: 20px;
-    border-radius: 20px;
-    background-color: #6839ba1e;
-    backdrop-filter: blur(20px);
-}
-
-
-.item-box__reg-title{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 20px;
-    line-height: 25px;
-    font-weight: normal;
-}
-.item-box__region{
-    font-size: 15px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    font-family: "Candal";
+    font-size: 25px;
     line-height: 20px;
-    font-weight: normal;
+    font-weight: 600;
+    color: #fff;
+
+.item-box__region{
+    text-align: center;
+    font-family: 'Noto Sans Canadian Aboriginal';
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;    
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #0b773b;
 }
-.item-box__info{
-    display: flex;
-    align-items: center;
-    gap: 20px;
+
 }
 
 .item-box__info * p{
-    margin: 0;
-    color: #fff;
+    font-size: 20px;
+    line-height: 22px;
+    color: #0b773b;
+    font-weight: 400;
 }
 .item-box__info * strong{
-    color: #fff;
 }
